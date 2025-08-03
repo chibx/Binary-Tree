@@ -1,5 +1,5 @@
 #pragma once
-#include "stdbool.h"
+#include <stdbool.h>
 
 // #define DEFAULT_STACK_SIZE 10;
 
@@ -11,19 +11,19 @@
 //                STACK_ERROR } StackStatus;
 
 typedef struct StackNode {
-    struct StackNode *prev;
-    char *value;
+        struct StackNode *prev;
+        char *value;
 } StackNode;
 
 typedef struct {
-    char *data;
-    int error;
+        char *data;
+        int error;
 } StackStatus;
 
 typedef struct {
-    //   int capacity;
-    int size;
-    StackNode *next;
+        //   int capacity;
+        int size;
+        StackNode *next;
 } Stack;
 
 bool stack_push(Stack *stack, char *value);

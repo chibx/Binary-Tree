@@ -1,5 +1,5 @@
 #pragma once
-#include "stdbool.h"
+#include <stdbool.h>
 
 // #define DEFAULT_Queue_SIZE 10;
 #define NO_QUEUE_ERR 0
@@ -10,20 +10,20 @@
 //                Queue_ERROR } QueueStatus;
 
 typedef struct {
-    char *data;
-    int error;
+        char *data;
+        int error;
 } QueueStatus;
 
 typedef struct QueueNode {
-    struct QueueNode *next;
-    char *value;
+        struct QueueNode *next;
+        char *value;
 } QueueNode;
 
 typedef struct {
-    //   int capacity;
-    int size;
-    QueueNode *front;
-    QueueNode *rear;
+        //   int capacity;
+        int size;
+        QueueNode *front;
+        QueueNode *rear;
 } Queue;
 
 bool enqueue(Queue *queue, char *value);

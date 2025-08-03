@@ -1,22 +1,22 @@
 {
     "tasks": [
         {
-            "type": "cppbuild",
-            "label": "C/C++: clang++ build active file",
+            "type": "shell",
+            "label": "Custom Clang Task",
             "command": "C:\\msys64\\ucrt64\\bin\\clang.exe",
             "args": [
-                "-std=c-20",
+                "-std=c17",
                 "-Wall",
                 "-Wextra",
                 "-fcolor-diagnostics",
                 "-fansi-escape-codes",
-                "-g",
-                "${file}",
+                "main.c",
+                "lib/**.c",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${workspaceFolder}\\output\\main.exe"
             ],
             "options": {
-                "cwd": "${fileDirname}"
+                // "cwd": "${workspaceFolder}"
             },
             "problemMatcher": ["$gcc"],
             "group": {

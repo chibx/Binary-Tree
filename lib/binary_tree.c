@@ -3,33 +3,33 @@
 #include <string.h>
 
 BinaryTree *create_binary_tree(char *initial_value) {
-    BinaryTree *tree = malloc(sizeof(BinaryTree));
+        BinaryTree *tree = malloc(sizeof(BinaryTree));
 
-    if (tree == NULL) {
-        exit(EXIT_FAILURE);
-    }
+        if (tree == NULL) {
+                exit(EXIT_FAILURE);
+        }
 
-    tree->left = NULL;
-    tree->right = NULL;
-    tree->value = initial_value;
+        tree->left = NULL;
+        tree->right = NULL;
+        tree->value = initial_value;
 
-    return tree;
+        return tree;
 }
 
 void binary_tree_insert(BinaryTree *tree, char *value) {
-    BinaryTree *new_node = malloc(sizeof(BinaryTree));
+        BinaryTree *new_node = malloc(sizeof(BinaryTree));
 
-    new_node->left = NULL;
-    new_node->right = NULL;
-    new_node->value = _strdup(value);
+        new_node->left = NULL;
+        new_node->right = NULL;
+        new_node->value = _strdup(value);
 
-    if (tree->left == NULL) {
-        tree->left = new_node;
-        return;
-    } else if (tree->right == NULL) {
-        tree->right = new_node;
-        return;
-    }
+        if (tree->left == NULL) {
+                tree->left = new_node;
+                return;
+        } else if (tree->right == NULL) {
+                tree->right = new_node;
+                return;
+        }
 
-    free(new_node);
+        free(new_node);
 }

@@ -1,22 +1,26 @@
-#include "stdbool.h"
+#include "../include/queue.h"
+#include <stdbool.h>
+
 #pragma once
 
 // typedef enum {
 //     PARSE_SUCCESS,
 //     /// When the user provides a number as first character of a variable
 //     PARSE_ERROR_1,
-//     /// When the user provides a character other than letters, $ and _ as first character
-//     PARSE_ERROR_2,
+//     /// When the user provides a character other than letters, $ and _ as
+//     first character PARSE_ERROR_2,
 // } ParseStatus;
 
 typedef struct {
-    char *message;
-    bool error;
+        char *message;
+        bool error;
 } ParseStatus;
 
 ParseStatus is_start_token(char token);
 
 ParseStatus is_valid_token(char token);
+
+Queue *convert_to_arg_queue(char *valid_infix);
 
 bool is_operator(char *text, int index);
 

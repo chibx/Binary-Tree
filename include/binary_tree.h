@@ -1,14 +1,13 @@
 #pragma once
 
-typedef enum { BINARY_TREE_SUCCESS,
-               BINARY_TREE_ERROR } BinTreeStatus;
+typedef enum { BINARY_TREE_SUCCESS, BINARY_TREE_ERROR } BinTreeStatus;
 
 // In this case
 typedef struct BinaryTree {
-    //   int capacity;
-    struct BinaryTree *left;
-    struct BinaryTree *right;
-    char *value;
+        //   int capacity;
+        struct BinaryTree *left;
+        struct BinaryTree *right;
+        char *value;
 } BinaryTree;
 
 // void traverse(BinaryTree *stack);
